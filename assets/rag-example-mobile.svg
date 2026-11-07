@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="364" height="616" viewBox="0 0 364 616" role="img" aria-labelledby="title desc"><title id="title">From a web page to a chat answer</title><desc id="desc">Illustrative example. Source text is chunked into an FAQ entry. Its embedding is stored with the text. A different shopper question retrieves the entry from the active version.</desc><defs><marker id="tip" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L7 4L0 8Z" fill="#8093a4"/></marker></defs>
+<rect x="0" y="0" width="364" height="616" rx="0" fill="#fff" stroke="none"/>
+<text x="14" y="26" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="600" fill="#245db5">Preparing the knowledge base</text>
+<rect x="14" y="44" width="336" height="129" rx="6" fill="white" stroke="#d3dfe8"/>
+<rect x="15" y="45" width="334" height="27" rx="5" fill="#f1f5f9" stroke="none"/>
+<text x="26" y="64" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="600" fill="#52667b">Scraped page · Delivery FAQ</text>
+<text x="26" y="97" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="600" fill="#203349">Source chunks</text>
+<path d="M27 109h278" fill="none" stroke="#d3dfe8" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="23" y="118" width="318" height="43" rx="3" fill="#eaf3fc" stroke="none"/>
+<text x="31" y="136" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#245db5">“An order can ship in</text>
+<text x="31" y="154" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#245db5">more than one parcel.”</text>
+<path d="M30 175v17" fill="none" stroke="#8093a4" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#tip)"/>
+<text x="44" y="189" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#52667b">Select source chunks</text>
+<rect x="14" y="197" width="336" height="129" rx="6" fill="white" stroke="#d3dfe8"/>
+<text x="26" y="218" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="600" fill="#203349">FAQ entry</text>
+<text x="26" y="245" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="600" fill="#245db5">Q</text>
+<text x="50" y="245" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#203349">Can my items ship</text>
+<text x="50" y="263" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#203349">separately?</text>
+<text x="26" y="292" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="600" fill="#146c61">A</text>
+<text x="50" y="292" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#203349">An order can ship in</text>
+<text x="50" y="310" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#203349">more than one parcel.</text>
+<path d="M30 328v16" fill="none" stroke="#8093a4" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#tip)"/>
+<text x="44" y="342" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#52667b">Embed entry</text>
+<g transform="translate(17 350)" fill="#eaf5f2" stroke="#146c61" stroke-width="2"><path d="M0 8C0 -2 39 -2 39 8V34C39 44 0 44 0 34Z"/><path d="M0 8C0 18 39 18 39 8M0 22C0 32 39 32 39 22" fill="none"/></g>
+<text x="72" y="368" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="600" fill="#146c61">PostgreSQL + pgvector</text>
+<text x="72" y="390" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#52667b">Save FAQ text and its embedding.</text>
+<path d="M14 411H350" fill="none" stroke="#d3dfe8" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="14" y="443" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="600" fill="#245db5">Answering a shopper</text>
+<text x="14" y="476" font-family="DejaVu Sans, Arial, sans-serif" font-size="17" font-weight="600" fill="#203349">“Why did only one parcel arrive?”</text>
+<text x="14" y="510" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#52667b">Embed the question. Search the active version.</text>
+<path d="M22 521v21" fill="none" stroke="#8093a4" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#tip)"/>
+<text x="14" y="571" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="600" fill="#146c61">Return the matching FAQ text</text>
+<text x="14" y="592" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#52667b">The agent can explain split deliveries.</text>
+</svg>

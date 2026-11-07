@@ -30,6 +30,10 @@ I built the FastAPI routes for preparing, inspecting and activating knowledge ve
 
 ## From source text to a reply
 
-For longer documents, the build splits source text into chunks. The model selects the relevant chunks and the application uses their original text to form an FAQ entry. An embedding model then converts the entry’s search text into a vector. I migrated the earlier FAISS index into **PostgreSQL with pgvector** so each entry and its embedding belong to a specific knowledge version.
+**Scrape and chunk.** I collected FAQ pages and longer support documents from the web. For long documents, the build proposes questions and selects the source chunks that answer them. The application checks those chunk IDs and assembles the answer from the original text. That keeps a generated question tied to wording the team can review.
 
-When a shopper asks about delivery, the FAQ tool embeds the question and searches for the closest entries in the active version. Vector search can find the right table, but the type of table determines what the assistant can conclude. I added a row lookup for supported postcode tables because a postcode missing from a surcharge list tells us nothing about whether delivery is available.
+**Embed and publish.** I migrated the earlier FAISS baseline to **PostgreSQL with pgvector**. Each FAQ entry belongs to a knowledge version and stores its question, answer, source and embedding. The build embeds the entry’s search text. The knowledge base API controls when the draft becomes searchable by the chat agent.
+
+**Retrieve and answer.** The FAQ tool embeds the shopper’s question, finds nearby entries in the active version and gives their text to the model. For supported postcode tables, I added a row lookup after retrieval. A surcharge table can be relevant to a delivery question, but a postcode missing from that table tells us nothing about whether delivery is available.
+
+[See one FAQ entry move from page to chat](../README.md#how-a-web-page-becomes-a-chat-answer)
