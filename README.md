@@ -4,10 +4,10 @@ A shopper can ask our production support assistant about an order or a delivery.
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/engineering-path-mobile.svg">
-  <img src="assets/engineering-path.svg" alt="Engineering timeline. January to October 2026: web chat, agent tools, traces, FAQ preparation, vector search and a knowledge base API. November 2026: Python file intake, validation and a Django catalog integration. The planned catalog workflow is labelled separately.">
+  <img src="assets/engineering-path.svg" alt="Support assistant: conversation tools, knowledge releases and trace evaluation. Supplier catalog: file validation and Django integration. The dashed branch marks the planned team workflow.">
 </picture>
 
-**Figure 1.** My responsibilities and the technologies I used on each project. The final line shows the catalog team’s planned workflow.
+**Figure 1.** My work on the support assistant and supplier catalog. The dashed branch shows the catalog team’s planned review and AI workflow.
 
 I rejoined the team in January after my Erasmus semester at Polytech Tours. My first tasks concerned the data returned by individual tools. Later I was responsible for how the team prepared, reviewed and released new knowledge. I had regular one-to-ones with my mentor and with our engineering manager.
 
@@ -25,6 +25,6 @@ Suppliers use different formats for their price lists. I built the **Python** in
 
 [Catalog architecture and my work with the backend team](cases/catalog-intake.md)
 
-## What I want to work on next
+## What I learned
 
-I want to compare retrieval changes on the same set of customer questions and trace how a change affects the answers. I’d also like to keep building APIs that other teams use to review and release those changes.
+Working on a production assistant taught me to follow an AI feature end to end. For the knowledge base, that meant turning source content into searchable entries, releasing a reviewed version and tracing how the agent used it in a customer’s reply. I’m looking forward to contributing to the team’s next releases and learning new technologies along the way.

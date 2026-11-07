@@ -1,34 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="377" height="708" viewBox="0 0 377 708" role="img" aria-labelledby="t d"><title id="t">Engineering work across two retail projects</title><desc id="d">January to October 2026: chat tools, FAQ ingestion, vector retrieval, knowledge releases and trace evaluation. November 2026: file validation and a Django catalog integration. Catalog review and AI suggestions belong to the planned team workflow.</desc>
-<rect width="377" height="708" fill="#fff"/>
-<path d="M21 22L21 626" fill="none" stroke="#d3dde5" stroke-width="1.4"/>
-<circle cx="21" cy="25" r="18" fill="white"/>
-<path transform="translate(21 25)" d="M-13 -8Q-13 -10 -11 -10H11Q13 -10 13 -8V9Q13 11 11 11H-11Q-13 11 -13 9Z M0 -10V-15 M-2 -15H2 M-6 -3V1 M6 -3V1 M-4 6H4" fill="none" stroke="#245db5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="45" y="29" fill="#245db5" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">JAN–OCT 2026</text>
-<text x="45" y="61" fill="#203349" font-size="20" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Customer support assistant</text>
-<circle cx="21" cy="414" r="18" fill="white"/>
-<path transform="translate(21 414)" d="M-13 -13H13V13H-13Z M-13 -5H13 M-5 -5V13 M-13 3H13" fill="none" stroke="#146c61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="45" y="418" fill="#146c61" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">NOV 2026</text>
-<text x="45" y="450" fill="#203349" font-size="20" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Supplier catalog intake</text>
-<text x="45" y="96" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Chat interface</text>
-<text x="45" y="116" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">HTML · CSS · JavaScript</text>
-<text x="45" y="148" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Agent tools and state</text>
-<text x="45" y="168" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">LangChain · LangGraph · Redis</text>
-<text x="45" y="200" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Trace evaluation</text>
-<text x="45" y="220" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">OpenTelemetry · Arize Phoenix</text>
-<text x="45" y="252" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Web pages to FAQ pairs</text>
-<text x="45" y="272" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">Jina Reader · text chunking</text>
-<text x="45" y="304" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Embeddings and retrieval</text>
-<text x="45" y="324" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">FAISS → PostgreSQL + pgvector</text>
-<text x="45" y="356" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Knowledge base API</text>
-<text x="45" y="376" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">Python · FastAPI</text>
-<text x="45" y="485" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Supplier file intake</text>
-<text x="45" y="505" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">Python · openpyxl</text>
-<text x="45" y="537" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Catalog integration</text>
-<text x="45" y="557" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">Django · PostgreSQL</text>
-<text x="45" y="589" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Validation and tests</text>
-<text x="45" y="609" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">Pydantic · pytest</text>
-<path d="M45 383L355 383" fill="none" stroke="#d3dde5" stroke-width="1.4"/>
-<text x="45" y="643" fill="#146c61" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Planned team workflow</text>
-<text x="45" y="665" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">React / TypeScript review · Celery workers</text>
-<text x="45" y="685" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">FastAPI for AI suggestions</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="378" height="695" viewBox="0 0 378 695" role="img" aria-labelledby="t d"><title id="t">Engineering responsibilities by project</title><desc id="d">Two projects with the contributions and tools for each branch. The dashed catalog branch is the team’s planned review and AI workflow.</desc>
+<rect width="378" height="695" fill="white"/>
+<g transform="translate(32 32) scale(1.14)" stroke="#285eaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#edf4ff"><path d="M-19 -14H12Q15 -14 15 -10V6Q15 9 12 9H-5L-13 16V9H-17Q-20 9 -20 6V-10Q-20 -14 -17 -14Z"/></g><g fill="none"><path d="M-13 -5H7M-13 1H2M20 -4V14Q20 17 17 17H13V21L7 17"/></g></g>
+<text x="61" y="23" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="13" fill="#285eaa">JAN–OCT 2026</text>
+<text x="61" y="49" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="20" fill="#203349">Support assistant</text>
+<path d="M32 60V270" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<path d="M32 74Q32 83 42 83H49" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<text x="58" y="88" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="16" fill="#203349">Run the conversation</text>
+<text x="66" y="110" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">HTML, CSS, JavaScript</text>
+<text x="66" y="130" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">LangChain, LangGraph, Redis</text>
+<path d="M32 158Q32 167 42 167H49" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<text x="58" y="172" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="16" fill="#203349">Prepare and publish knowledge</text>
+<text x="66" y="194" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Jina Reader for FAQ chunks</text>
+<text x="66" y="214" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Python and FastAPI for releases</text>
+<text x="66" y="234" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">FAISS to PostgreSQL with pgvector</text>
+<path d="M32 270Q32 279 42 279H49" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<text x="58" y="284" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="16" fill="#203349">Evaluate the reply</text>
+<text x="66" y="306" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">OpenTelemetry traces in Arize Phoenix</text>
+<path d="M17 332H360" fill="none" stroke="#d8e2ea" stroke-linecap="round" stroke-width="1.6" />
+<g transform="translate(32 371) scale(1.14)" stroke="#126d61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#e9f5f1"><rect x="-17" y="-17" width="34" height="34" rx="2"/></g><g fill="none"><path d="M-17 -7H17M-5 -7V17M-17 2H17M-17 10H17"/></g></g>
+<text x="61" y="362" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="13" fill="#126d61">NOV 2026</text>
+<text x="61" y="388" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="20" fill="#203349">Supplier catalog</text>
+<path d="M32 399V501" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<path d="M32 501V589" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" stroke-dasharray="4 5" />
+<path d="M32 412Q32 421 42 421H49" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<text x="58" y="426" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="16" fill="#203349">Read and validate supplier files</text>
+<text x="66" y="448" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Python, openpyxl, Pydantic</text>
+<path d="M32 495Q32 504 42 504H49" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<text x="58" y="509" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="16" fill="#203349">Connect to the catalog backend</text>
+<text x="66" y="531" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Django and PostgreSQL</text>
+<text x="66" y="551" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Regression tests with pytest</text>
+<path d="M32 589Q32 598 42 598H49" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" stroke-dasharray="4 5" />
+<text x="58" y="603" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="16" fill="#203349">Planned team workflow</text>
+<text x="66" y="625" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">React and TypeScript for review</text>
+<text x="66" y="645" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Celery jobs and FastAPI suggestions</text>
 </svg>
