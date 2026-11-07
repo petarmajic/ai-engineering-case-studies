@@ -1,24 +1,22 @@
 # Catalog Intake Workbench
 
-Suppliers send price lists in different formats. Our team designed a workbench where an operator could review proposed product changes before sending them to an external catalog. I built the Python intake for known XLSX and CSV formats and connected it to the existing Django service that stores accepted supplier data.
+Suppliers use different formats for their price lists. Our team designed a workbench to turn those files into product updates an operator could review. I built the Python intake for known XLSX and CSV formats and connected it to the team’s Django backend.
 
 [Overview](../README.md)
 
-## How the pieces fit
+## How the system fits together
 
 <picture>
   <source media="(max-width: 600px)" srcset="../assets/catalog-system-mobile.svg">
   <img src="../assets/catalog-system.svg" alt="File intake sends validated products to Django and PostgreSQL. The planned workflow adds React review and a separate FastAPI service for AI suggestions.">
 </picture>
 
-**Figure 1.** Solid connections show the implemented initial load. Dashed connections show the planned review and AI workflow.
+**Figure 1.** The file intake and initial catalog load were implemented. The dashed connections show the planned review and AI workflow.
 
-**Django** owns the supplier records and the last accepted catalog. In the wider design, **React** gives operators a place to review changes, **Celery** runs background jobs and a separate **FastAPI** service proposes categories and attributes. Accepted changes would then go to an external import service. The part I implemented runs through a development command on a feature branch.
+**Django** owns the supplier and product records in **PostgreSQL**. The team’s design gives operators a **React** interface to review changes. A separate **FastAPI** service would suggest categories and attributes, with **Celery** coordinating background work.
 
-## My part of the handoff
+## My contribution
 
-A teammate built the data model and the service for loading an initial catalog. I wrote the intake code that finds the headers, maps supplier columns to typed product records and reports errors against the original rows. I connected the two components so the service receives a complete set of valid products before it writes to PostgreSQL.
+A teammate built the service that stores the accepted catalog. I translated supplier columns into the typed product records that service expects. I added validation and tests so a file with missing or invalid data cannot replace a catalog the team has already accepted.
 
-That last condition matters because an external full import can mark an omitted product inactive. I fixed a workbook case where the advertised range ended before the final product row. I added regression tests for that case and for a file with one invalid row. Both check that an incomplete import preserves the previously accepted state.
-
-I also added Linux subprocess limits for parsing time, memory and output size. Targeted parser and normalization tests passed in the development review. The Linux subprocess tests were skipped on Windows.
+That handoff taught me how to design a Python component around another engineer’s API. The two parts had to agree on what a valid product looks like and when it is safe to write to the database.

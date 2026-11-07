@@ -1,48 +1,44 @@
 # AI engineering for retail
 
-I worked on a production support assistant that helps shoppers track orders and check delivery options. I started with the tools it calls during a conversation and went on to build the **knowledge base API** that lets our team change the information it uses. On a second project, I built the part of a catalog application that turns supplier files into records the backend can accept.
-
-**Python · FastAPI · LangGraph · Redis · PostgreSQL · pgvector · OpenTelemetry · Arize Phoenix · Django**
-
-## How my responsibilities grew
-
-After my Erasmus semester at Polytech Tours, I rejoined the team in January 2026 as a **student AI/ML engineer**. My early assignments were small enough to follow through one tool call. Later my changes touched what every conversation could retrieve.
+I worked on two retail systems as a **student AI/ML engineer**. For a production support assistant, I developed order tools, evaluated conversations and built the **knowledge base API**. On the catalog team, I connected supplier data to the backend that maintains product records.
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/engineering-path-mobile.svg">
-  <img src="assets/engineering-path.svg" alt="My work progressed from order tools and conversation state to trace evaluation, knowledge releases and supplier data intake.">
+  <img src="assets/engineering-path.svg" alt="January to October 2026: conversation tools, trace evaluation and knowledge releases for the support assistant. November 2026: supplier file intake and Django integration for the catalog team.">
 </picture>
 
-**Figure 1.** My responsibilities across two teams. The first three steps belong to the support assistant. The fourth shows where I joined the catalog team’s backend work.
+**Figure 1.** My work across two projects in 2026, with the technologies I used for each responsibility.
 
-I had regular one-to-ones with my mentor and with our engineering manager. On the support team, a colleague separated the admin application from chat and added login. I owned the knowledge base API behind that interface.
+I rejoined the team in January after my Erasmus semester at Polytech Tours. My first assignments involved the data returned by a single tool. Later I was responsible for how the team published knowledge used across conversations. Alongside my project work, I had regular one-to-ones with my mentor and with our engineering manager.
 
 ## Customer support in production
 
-When an order arrives in two shipments, a single delivery status can give the shopper the wrong impression. I changed how the order tools represent each shipment and added conversation-scoped storage in **Redis** so a follow-up stays tied to the same order.
+A shopper can ask where an order is and then follow up about a particular delivery. I worked on the **LangGraph** tools that return the status of each shipment and used **Redis** to carry the order context across messages.
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/support-runtime-mobile.svg">
   <img src="assets/support-runtime.svg" alt="The chat runtime calls support tools, keeps state in Redis and retrieves active knowledge. About 30,000 production sessions, with roughly five to eight messages on average per successful session.">
 </picture>
 
-**Figure 2.** The language model selects a tool. Application code reads the business data and checks the rules before the assistant explains the result.
+**Figure 2.** The assistant handled about 30,000 production sessions. Successful sessions averaged roughly 5–8 messages.
 
-I evaluated replies in **Arize Phoenix** by following **OpenTelemetry** traces from the customer’s request to the tool result and the final answer. Through the **FastAPI** routes I wrote, an operator can start a knowledge build, inspect a draft and decide when chat should use it.
+I evaluated replies in **Arize Phoenix** by following **OpenTelemetry** traces from the tool call to the final answer. I also built the **FastAPI** routes that operators use to prepare, review and activate a new knowledge version while chat continues to serve the current one.
 
-[Inside the assistant: conversation state, trace evaluation and the knowledge base API](cases/support-assistant.md)
+[Support assistant architecture and knowledge releases](cases/support-assistant.md)
 
 ## Supplier catalog intake
 
-Our second team was building a workbench for turning supplier price lists into catalog updates. I built the file intake and connected it to a teammate’s **Django** service. If a file contains a blocking error, the import stops before it can replace the supplier’s accepted data.
+The catalog team needed a common way to read price lists from different suppliers. I built the **Python** intake and connected it to a teammate’s **Django** service so the team could validate product records before accepting them into the catalog.
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/catalog-system-mobile.svg">
   <img src="assets/catalog-system.svg" alt="Supplier files enter a Django backend backed by PostgreSQL. Dashed connections mark the planned review and AI workflow.">
 </picture>
 
-**Figure 3.** The team designed the operator review and AI services around Django. My part was the path from a supplier file to a validated initial catalog.
+**Figure 3.** Supplier intake was my part of the system. The dashed connections show the team’s planned review and AI workflow.
 
-[Catalog architecture and my contribution](cases/catalog-intake.md)
+[Catalog architecture and teamwork](cases/catalog-intake.md)
 
-I want to keep building backend services for AI products where I can trace a customer’s answer to its source and test what happens when that source changes.
+## What I want to work on next
+
+I want to get better at evaluating how changes to retrieval affect an agent’s answers. These projects also made me want to keep building the APIs behind those tools, especially when another team depends on the data they return.
