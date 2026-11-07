@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d" width="860" height="274" viewBox="0 0 860 274">
+<title id="t">How the support assistant answers</title><desc id="d">FastAPI receives a message. LangGraph runs the agent and its tools using Redis, order services and the active knowledge version.</desc>
+<rect width="860" height="274" fill="#fff"/>
+<defs><marker id="tip" viewBox="0 0 8 8" refX="6.8" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0L7 4L0 8Z" fill="#70859a"/></marker></defs>
+<path d="M112 108H307" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)"/>
+<path d="M369 108H459Q470 108 470 97V46Q470 36 481 36H527" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)"/>
+<path d="M369 108H527" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)"/>
+<path d="M369 108H459Q470 108 470 119V178Q470 188 482 188H527" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)"/>
+<g transform="translate(80 108) scale(1.13)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-23 -17H23V12H-23Z" fill="#edf4ff"/>
+<path d="M-23 7H23 M0 12V19 M-11 19H11" fill="none"/></g>
+<text x="80" y="156" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="18" fill="#203349">Chat widget</text>
+<text x="80" y="178" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#52667b">Customer messages</text>
+<g transform="translate(337 108) scale(1.13)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-21 -17H21V-4H-21Z M-21 3H21V16H-21Z" fill="#edf4ff"/>
+<path d="M-15 -10H-12 M-6 -10H12 M-15 10H-12 M-6 10H12" fill="none"/></g>
+<text x="337" y="156" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="18" fill="#203349">FastAPI + LangGraph</text>
+<text x="337" y="178" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#52667b">Chat and tool execution</text>
+<g transform="translate(555 36) scale(1)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-17 -19H12L18 -13V20H-17Z" fill="#edf4ff"/>
+<path d="M-9 -8H9 M-9 0H9 M-9 9H2" fill="none"/></g>
+<text x="591" y="35" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">Order and CRM tools</text>
+<text x="591" y="55" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="13" fill="#52667b">Order status and support tickets</text>
+<g transform="translate(555 108) scale(1)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-19 -12V12C-19 22 19 22 19 12V-12C19 -22 -19 -22 -19 -12Z" fill="#edf4ff"/>
+<path d="M-19 -12C-19 -3 19 -3 19 -12 M-19 1C-19 10 19 10 19 1" fill="none"/></g>
+<text x="591" y="107" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">Redis</text>
+<text x="591" y="127" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="13" fill="#52667b">State and attachment references</text>
+<g transform="translate(555 188) scale(1)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-22 -15Q-11 -20 0 -13Q11 -20 22 -15V13Q11 8 0 16Q-11 8 -22 13Z" fill="#edf4ff"/>
+<path d="M0 -13V16" fill="none"/></g>
+<text x="591" y="187" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">FAQ retrieval</text>
+<text x="591" y="207" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="13" fill="#52667b">Active knowledge in pgvector</text>
+<path d="M22 224H833" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="26" y="253" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="20" fill="#146c61">≈30,000</text>
+<text x="128" y="253" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#52667b">production sessions</text>
+<text x="354" y="253" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="20" fill="#146c61">5–8 messages</text>
+<text x="522" y="253" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#52667b">on average per successful session</text>
+</svg>

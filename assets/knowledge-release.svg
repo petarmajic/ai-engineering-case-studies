@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d" width="860" height="233" viewBox="0 0 860 233">
+<title id="t">Who changes the assistant’s knowledge?</title><desc id="d">Operators can build and activate a version through the knowledge base API. The chat agent retrieves content only from the active version.</desc>
+<rect width="860" height="233" fill="#fff"/>
+<defs><marker id="tip" viewBox="0 0 8 8" refX="6.8" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0L7 4L0 8Z" fill="#70859a"/></marker></defs>
+<g transform="translate(116 61) scale(1.13)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-21 -17H21V-4H-21Z M-21 3H21V16H-21Z" fill="#edf4ff"/>
+<path d="M-15 -10H-12 M-6 -10H12 M-15 10H-12 M-6 10H12" fill="none"/></g>
+<text x="116" y="109" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="18" fill="#203349">Knowledge base API</text>
+<text x="116" y="131" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#52667b">Build, inspect and activate</text>
+<g transform="translate(431 61) scale(1.13)" stroke="#146c61" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-19 -12V12C-19 22 19 22 19 12V-12C19 -22 -19 -22 -19 -12Z" fill="#eaf6f2"/>
+<path d="M-19 -12C-19 -3 19 -3 19 -12 M-19 1C-19 10 19 10 19 1" fill="none"/></g>
+<text x="431" y="109" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="18" fill="#203349">PostgreSQL + pgvector</text>
+<text x="431" y="131" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#52667b">Draft, active and archived versions</text>
+<g transform="translate(739 61) scale(1.13)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-19 -8Q-19 -12 -15 -12H15Q19 -12 19 -8V13Q19 17 15 17H-15Q-19 17 -19 13Z" fill="#edf4ff"/>
+<path d="M0 -12V-18 M-4 -18H4 M-8 -3V2 M8 -3V2 M-5 9H5" fill="none"/></g>
+<text x="739" y="109" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="18" fill="#203349">Support assistant</text>
+<text x="739" y="131" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#52667b">Reads the active version</text>
+<path d="M151 61H394" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)"/>
+<path d="M703 61H469" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)"/>
+<text x="272" y="47" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#52667b">publish</text>
+<text x="583" y="47" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#52667b">query</text>
+<path d="M405 151V165Q405 174 415 174H704Q717 174 717 163V151" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)"/>
+<text x="562" y="202" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#52667b">matching text from the active version</text>
+</svg>

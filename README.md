@@ -1,35 +1,48 @@
-# AI engineering for customer support and catalog intake
+# AI engineering for retail
 
-A customer can ask our support assistant where the rest of an order is, even when the order arrives in several deliveries. I started by improving the order data its tools returned. As my responsibilities grew, I added conversation state in Redis, evaluated replies in Phoenix and built controls for releasing new FAQ content. On a second team, I built a spreadsheet parser that protects a supplier’s catalog from incomplete imports.
+I worked on a production support assistant that helps shoppers track orders and check delivery options. I started with the tools it calls during a conversation and went on to build the **knowledge base API** that lets our team change the information it uses. On a second project, I built the part of a catalog application that turns supplier files into records the backend can accept.
 
-I returned from my Erasmus semester at Polytech Tours in January 2026 and rejoined the team as a **student AI/ML engineer** after my internship the previous summer.
+**Python · FastAPI · LangGraph · Redis · PostgreSQL · pgvector · OpenTelemetry · Arize Phoenix · Django**
 
-## What happens inside a support conversation
+## How my responsibilities grew
 
-The assistant handled **about 30,000 sessions in production**. Successful sessions averaged roughly **5–8 messages**. To evaluate an answer, I followed its OpenTelemetry trace in **Arize Phoenix**. That let me compare the reply the customer received with the tool the agent called and the data that tool returned.
-
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/support-session-mobile.svg">
-  <img src="assets/support-session.svg" alt="Production session figures and an illustrative order lookup showing two different shipment statuses.">
-</picture>
-
-**Figure 1.** An illustrative split order. The order tool provides a status for each delivery so the assistant can explain why one parcel arrived before the other.
-
-My first assignments involved individual tools. Fixing a status mapping helped with one answer, but a follow-up question also needed the right order and attachments to survive across turns. I added conversation-scoped storage in **Redis** and worked on call limits in the **LangGraph** runtime. Later I moved FAQ retrieval from a local **FAISS** index to versioned knowledge in **PostgreSQL with pgvector**. I built controls that let an administrator inspect a draft and decide when chat should use it.
-
-[Support assistant architecture, trace review and knowledge releases](cases/support-assistant.md)
-
-## When a spreadsheet silently drops a product
-
-On the catalog project, a file could open successfully and still report a used range smaller than its contents. A reader that trusted that range could hand the team a plausible list with the last product missing. In a full import, a missing product could be marked inactive.
+After my Erasmus semester at Polytech Tours, I rejoined the team in January 2026 as a **student AI/ML engineer**. My early assignments were small enough to follow through one tool call. Later my changes touched what every conversation could retrieve.
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/workbook-range-mobile.svg">
-  <img src="assets/workbook-range.svg" alt="A synthetic workbook declares A1:B2 as its used range even though row 3 contains a second product.">
+  <source media="(max-width: 600px)" srcset="assets/engineering-path-mobile.svg">
+  <img src="assets/engineering-path.svg" alt="My work progressed from order tools and conversation state to trace evaluation, knowledge releases and supplier data intake.">
 </picture>
 
-**Figure 2.** The declared range ends at row 2. The product in row 3 is still part of the supplier’s file.
+**Figure 1.** My responsibilities across two teams. The first three steps belong to the support assistant. The fourth shows where I joined the catalog team’s backend work.
 
-I fixed how the **Python** parser reads these workbooks and connected it to a teammate’s **Django** service. I wrote regression tests for a shortened product list and for an invalid row in an otherwise valid file. In both cases, the previously accepted catalog has to survive.
+I had regular one-to-ones with my mentor and with our engineering manager. On the support team, a colleague separated the admin application from chat and added login. I owned the knowledge base API behind that interface.
 
-[Catalog architecture, parser behaviour and regression tests](cases/catalog-intake.md)
+## Customer support in production
+
+When an order arrives in two shipments, a single delivery status can give the shopper the wrong impression. I changed how the order tools represent each shipment and added conversation-scoped storage in **Redis** so a follow-up stays tied to the same order.
+
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/support-runtime-mobile.svg">
+  <img src="assets/support-runtime.svg" alt="The chat runtime calls support tools, keeps state in Redis and retrieves active knowledge. About 30,000 production sessions, with roughly five to eight messages on average per successful session.">
+</picture>
+
+**Figure 2.** The language model selects a tool. Application code reads the business data and checks the rules before the assistant explains the result.
+
+I evaluated replies in **Arize Phoenix** by following **OpenTelemetry** traces from the customer’s request to the tool result and the final answer. Through the **FastAPI** routes I wrote, an operator can start a knowledge build, inspect a draft and decide when chat should use it.
+
+[Inside the assistant: conversation state, trace evaluation and the knowledge base API](cases/support-assistant.md)
+
+## Supplier catalog intake
+
+Our second team was building a workbench for turning supplier price lists into catalog updates. I built the file intake and connected it to a teammate’s **Django** service. If a file contains a blocking error, the import stops before it can replace the supplier’s accepted data.
+
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/catalog-system-mobile.svg">
+  <img src="assets/catalog-system.svg" alt="Supplier files enter a Django backend backed by PostgreSQL. Dashed connections mark the planned review and AI workflow.">
+</picture>
+
+**Figure 3.** The team designed the operator review and AI services around Django. My part was the path from a supplier file to a validated initial catalog.
+
+[Catalog architecture and my contribution](cases/catalog-intake.md)
+
+I want to keep building backend services for AI products where I can trace a customer’s answer to its source and test what happens when that source changes.

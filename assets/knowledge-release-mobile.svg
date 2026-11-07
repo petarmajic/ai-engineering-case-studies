@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d" width="365" height="309" viewBox="0 0 365 309">
+<title id="t">Who changes the assistant’s knowledge?</title><desc id="d">Operators can build and activate a version through the knowledge base API. The chat agent retrieves content only from the active version.</desc>
+<rect width="365" height="309" fill="#fff"/>
+<defs><marker id="tip" viewBox="0 0 8 8" refX="6.8" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0L7 4L0 8Z" fill="#70859a"/></marker></defs>
+<g transform="translate(29 35) scale(1)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-21 -17H21V-4H-21Z M-21 3H21V16H-21Z" fill="#edf4ff"/>
+<path d="M-15 -10H-12 M-6 -10H12 M-15 10H-12 M-6 10H12" fill="none"/></g>
+<text x="65" y="34" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">Knowledge base API</text>
+<text x="65" y="54" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="13" fill="#52667b">Build, inspect and activate a version.</text>
+<path d="M29 57V106" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)"/>
+<g transform="translate(29 135) scale(1)" stroke="#146c61" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-19 -12V12C-19 22 19 22 19 12V-12C19 -22 -19 -22 -19 -12Z" fill="#eaf6f2"/>
+<path d="M-19 -12C-19 -3 19 -3 19 -12 M-19 1C-19 10 19 10 19 1" fill="none"/></g>
+<text x="65" y="134" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">PostgreSQL + pgvector</text>
+<text x="65" y="154" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="13" fill="#52667b">Draft, active and archived versions</text>
+<path d="M29 223V161" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)"/>
+<g transform="translate(29 251) scale(1)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-19 -8Q-19 -12 -15 -12H15Q19 -12 19 -8V13Q19 17 15 17H-15Q-19 17 -19 13Z" fill="#edf4ff"/>
+<path d="M0 -12V-18 M-4 -18H4 M-8 -3V2 M8 -3V2 M-5 9H5" fill="none"/></g>
+<text x="65" y="250" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">Support assistant</text>
+<text x="65" y="270" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="13" fill="#52667b">Read the active version through a tool.</text>
+</svg>

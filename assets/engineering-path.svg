@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d" width="860" height="166" viewBox="0 0 860 166">
+<title id="t">How my responsibilities grew</title><desc id="d">I started with order tools, evaluated conversations, built the knowledge base API and connected supplier intake to the catalog backend.</desc>
+<rect width="860" height="166" fill="#fff"/>
+<defs><marker id="tip" viewBox="0 0 8 8" refX="6.8" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0L7 4L0 8Z" fill="#70859a"/></marker></defs>
+<g transform="translate(92 43) scale(1.15)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-17 -19H12L18 -13V20H-17Z" fill="#edf4ff"/>
+<path d="M-9 -8H9 M-9 0H9 M-9 9H2" fill="none"/></g>
+<path d="M97 83H299" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="92" cy="83" r="4.5" fill="#245db5"/>
+<text x="92" y="117" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="19" fill="#203349">Order tools</text>
+<text x="92" y="141" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#52667b">Map each delivery</text>
+<g transform="translate(304 43) scale(1.15)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-18 -17V14H-5 M-10 -8V2H2 M-10 -8H-4 M0 -10H15 M6 1H20 M-1 14H11" fill="none"/></g>
+<path d="M309 83H531" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="304" cy="83" r="4.5" fill="#245db5"/>
+<text x="304" y="117" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="19" fill="#203349">Trace evaluation</text>
+<text x="304" y="141" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#52667b">Follow calls in Phoenix</text>
+<g transform="translate(536 43) scale(1.15)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-21 -17H21V-4H-21Z M-21 3H21V16H-21Z" fill="#edf4ff"/>
+<path d="M-15 -10H-12 M-6 -10H12 M-15 10H-12 M-6 10H12" fill="none"/></g>
+<path d="M541 83H753" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="536" cy="83" r="4.5" fill="#245db5"/>
+<text x="536" y="117" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="19" fill="#203349">Knowledge base API</text>
+<text x="536" y="141" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#52667b">Build and release versions</text>
+<g transform="translate(758 43) scale(1.15)" stroke="#146c61" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-19 -19H19V19H-19Z" fill="#eaf6f2"/>
+<path d="M-19 -8H19 M-7 -8V19 M-19 2H19 M-19 11H19" fill="none"/></g>
+<circle cx="758" cy="83" r="4.5" fill="#146c61"/>
+<text x="758" y="117" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="19" fill="#203349">Catalog intake</text>
+<text x="758" y="141" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#52667b">Protect accepted data</text>
+</svg>
