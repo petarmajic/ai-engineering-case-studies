@@ -1,63 +1,30 @@
 # AI engineering for retail
 
-A shopper can ask our production support assistant where an order is or whether delivery is available to a particular postcode. As a **student AI/ML engineer**, I developed order tools and built the **knowledge base API** the team uses to publish answers to delivery questions. On a second team, I connected supplier price lists to the backend that maintains the product catalog.
+A shopper can ask our production support assistant about an order or a delivery. As a **student AI/ML engineer**, I built order tools and the **knowledge base API** our team uses to publish support content. On a second project, I connected supplier price lists to a teammate’s catalog backend.
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/engineering-path-mobile.svg">
-  <img src="assets/engineering-path.svg" alt="January to October 2026: conversation tools, trace evaluation and knowledge releases for the support assistant. November 2026: supplier file intake and Django integration for the catalog team.">
+  <img src="assets/engineering-path.svg" alt="Engineering timeline. January to October 2026: web chat, agent tools, traces, FAQ preparation, vector search and a knowledge base API. November 2026: Python file intake, validation and a Django catalog integration. The planned catalog workflow is labelled separately.">
 </picture>
 
-**Figure 1.** My responsibilities on the support and catalog teams in 2026.
+**Figure 1.** My responsibilities and the technologies I used on each project. The final line shows the catalog team’s planned workflow.
 
-I rejoined the team in January after my Erasmus semester at Polytech Tours. I started by improving the data returned by individual tools. Later I took responsibility for publishing the knowledge those tools use across conversations. I had regular one-to-ones with my mentor and with our engineering manager.
+I rejoined the team in January after my Erasmus semester at Polytech Tours. My first tasks concerned the data returned by individual tools. Later I was responsible for how the team prepared, reviewed and released new knowledge. I had regular one-to-ones with my mentor and with our engineering manager.
 
-<a name="how-the-technologies-fit-together"></a>
+## Customer support in production
 
-## How a web page becomes a chat answer
+The assistant handled **about 30,000 production sessions**. Successful sessions averaged roughly **5–8 messages**. I evaluated replies in **Arize Phoenix** by following OpenTelemetry traces from the tool result to the final answer. If an order had two shipments, for example, I could check whether the reply accounted for both.
 
-I scraped support pages and turned their text into question-and-answer entries for the assistant. For long pages, I split the text into chunks so an answer could retain the source wording. I stored the entries with their embeddings in **PostgreSQL** and used **pgvector** to search the version our team had approved.
+I scraped support pages, split long documents into chunks and used the source text to build question-and-answer entries. I stored those entries and their embeddings in **PostgreSQL**. The FastAPI routes I built let an operator activate a reviewed version, and the FAQ tool uses **pgvector** to search that version during chat.
 
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/rag-example-mobile.svg">
-  <img src="assets/rag-example.svg" alt="A scraped delivery page becomes a question-and-answer entry with an embedding. During chat, a differently worded question retrieves text from the active knowledge version.">
-</picture>
+[Support assistant architecture, knowledge releases and trace review](cases/support-assistant.md)
 
-**Figure 2.** An illustrative delivery FAQ. The shopper asks a different question from the one stored in the FAQ. The assistant can use the matching source text to explain why items might arrive separately.
+## Supplier catalog intake
 
-The **FastAPI** knowledge base API I built lets an operator review the draft before activating it. While that review is underway, the assistant keeps searching the previous release.
-
-<a name="customer-support-in-production"></a>
-
-## How I evaluated a support conversation
-
-The **JavaScript** chat widget sends the shopper’s message to FastAPI. **LangGraph** resumes the conversation and **Redis** keeps the order context available for follow-up questions. I adapted the widget’s connection to the backend and changed how the order tool represents shipments, so the assistant can explain the status of each parcel.
-
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/support-runtime-mobile.svg">
-  <img src="assets/support-runtime.svg" alt="The chat runtime calls support tools, keeps state in Redis and retrieves active knowledge. About 30,000 production sessions, with roughly five to eight messages on average per successful session.">
-</picture>
-
-**Figure 3.** The assistant handled about 30,000 production sessions. Successful sessions averaged roughly 5–8 messages.
-
-I used **OpenTelemetry** to export request traces and reviewed them in **Arize Phoenix**. If the tool returns two shipments but the reply mentions only one, comparing the two steps helps me locate where the information was lost.
-
-[Support assistant architecture, retrieval and trace review](cases/support-assistant.md)
-
-<a name="supplier-catalog-intake"></a>
-
-## How supplier files reach the catalog
-
-Suppliers use different column names and file formats. I built the **Python** intake that maps price lists to a common product record and connected it to a teammate’s **Django** service. The service can accept a complete file or keep the previous catalog if validation fails.
-
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/catalog-system-mobile.svg">
-  <img src="assets/catalog-system.svg" alt="Supplier files enter a Django backend backed by PostgreSQL. Dashed connections mark the planned review and AI workflow.">
-</picture>
-
-**Figure 4.** The solid connections show how validated products reach PostgreSQL. Dashed connections show the planned operator review and AI suggestions.
+Suppliers use different formats for their price lists. I built the **Python** intake that maps those files to a common product record and connected it to the team’s **Django** service. The backend can reject an incomplete import before it replaces the accepted catalog.
 
 [Catalog architecture and my work with the backend team](cases/catalog-intake.md)
 
 ## What I want to work on next
 
-I want to compare retrieval changes on the same set of customer questions and trace how a change affects the final answers. I’d also like to keep building APIs that other teams can use to review and release those changes.
+I want to compare retrieval changes on the same set of customer questions and trace how a change affects the answers. I’d also like to keep building APIs that other teams use to review and release those changes.

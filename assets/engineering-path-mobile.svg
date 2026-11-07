@@ -1,26 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d" width="378" height="440" viewBox="0 0 378 440">
-<title id="t">Projects and technical responsibilities</title><desc id="d">Two successive projects. In customer support I worked on tools, trace review and knowledge releases. For supplier intake I connected file validation to the catalog backend.</desc>
-<rect width="378" height="440" fill="#fff"/>
-<defs><marker id="tip" viewBox="0 0 8 8" refX="6.8" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0L7 4L0 8Z" fill="#70859a"/></marker></defs>
-<path d="M23 29L23 403" stroke="#cdd9e2" fill="none" stroke-width="1"/>
-<circle cx="23" cy="30" r="16" fill="white"/>
-<g transform="translate(23 30) scale(0.62)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-<path d="M-19 -8Q-19 -12 -15 -12H15Q19 -12 19 -8V13Q19 17 15 17H-15Q-19 17 -19 13Z" fill="#edf4ff"/>
-<path d="M0 -12V-18 M-4 -18H4 M-8 -3V2 M8 -3V2 M-5 9H5" fill="none"/></g>
-<circle cx="23" cy="301" r="16" fill="white"/>
-<g transform="translate(23 301) scale(0.62)" stroke="#146c61" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-<path d="M-19 -19H19V19H-19Z" fill="#eaf6f2"/>
-<path d="M-19 -8H19 M-7 -8V19 M-19 2H19 M-19 11H19" fill="none"/></g>
-<text x="41" y="35" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="13" fill="#245db5">JAN–OCT 2026</text>
-<text x="41" y="69" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="20" fill="#203349">Customer support assistant</text>
-<text x="47" y="108" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">Order tools and chat state</text>
-<text x="47" y="131" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#52667b">LangGraph · Redis</text>
-<text x="47" y="172" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">Trace evaluation</text>
-<text x="47" y="195" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#52667b">OpenTelemetry · Arize Phoenix</text>
-<text x="47" y="236" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">Knowledge base API</text>
-<text x="47" y="259" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#52667b">FastAPI · PostgreSQL · pgvector</text>
-<text x="41" y="306" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="13" fill="#146c61">NOV 2026</text>
-<text x="41" y="340" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="20" fill="#203349">Supplier catalog intake</text>
-<text x="47" y="378" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">Validate and load supplier files</text>
-<text x="47" y="401" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#52667b">Python · Django · PostgreSQL</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="377" height="708" viewBox="0 0 377 708" role="img" aria-labelledby="t d"><title id="t">Engineering work across two retail projects</title><desc id="d">January to October 2026: chat tools, FAQ ingestion, vector retrieval, knowledge releases and trace evaluation. November 2026: file validation and a Django catalog integration. Catalog review and AI suggestions belong to the planned team workflow.</desc>
+<rect width="377" height="708" fill="#fff"/>
+<path d="M21 22L21 626" fill="none" stroke="#d3dde5" stroke-width="1.4"/>
+<circle cx="21" cy="25" r="18" fill="white"/>
+<path transform="translate(21 25)" d="M-13 -8Q-13 -10 -11 -10H11Q13 -10 13 -8V9Q13 11 11 11H-11Q-13 11 -13 9Z M0 -10V-15 M-2 -15H2 M-6 -3V1 M6 -3V1 M-4 6H4" fill="none" stroke="#245db5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="45" y="29" fill="#245db5" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">JAN–OCT 2026</text>
+<text x="45" y="61" fill="#203349" font-size="20" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Customer support assistant</text>
+<circle cx="21" cy="414" r="18" fill="white"/>
+<path transform="translate(21 414)" d="M-13 -13H13V13H-13Z M-13 -5H13 M-5 -5V13 M-13 3H13" fill="none" stroke="#146c61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="45" y="418" fill="#146c61" font-size="13" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">NOV 2026</text>
+<text x="45" y="450" fill="#203349" font-size="20" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Supplier catalog intake</text>
+<text x="45" y="96" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Chat interface</text>
+<text x="45" y="116" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">HTML · CSS · JavaScript</text>
+<text x="45" y="148" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Agent tools and state</text>
+<text x="45" y="168" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">LangChain · LangGraph · Redis</text>
+<text x="45" y="200" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Trace evaluation</text>
+<text x="45" y="220" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">OpenTelemetry · Arize Phoenix</text>
+<text x="45" y="252" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Web pages to FAQ pairs</text>
+<text x="45" y="272" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">Jina Reader · text chunking</text>
+<text x="45" y="304" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Embeddings and retrieval</text>
+<text x="45" y="324" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">FAISS → PostgreSQL + pgvector</text>
+<text x="45" y="356" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Knowledge base API</text>
+<text x="45" y="376" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">Python · FastAPI</text>
+<text x="45" y="485" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Supplier file intake</text>
+<text x="45" y="505" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">Python · openpyxl</text>
+<text x="45" y="537" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Catalog integration</text>
+<text x="45" y="557" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">Django · PostgreSQL</text>
+<text x="45" y="589" fill="#203349" font-size="15" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Validation and tests</text>
+<text x="45" y="609" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">Pydantic · pytest</text>
+<path d="M45 383L355 383" fill="none" stroke="#d3dde5" stroke-width="1.4"/>
+<text x="45" y="643" fill="#146c61" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Planned team workflow</text>
+<text x="45" y="665" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">React / TypeScript review · Celery workers</text>
+<text x="45" y="685" fill="#506578" font-size="14" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400">FastAPI for AI suggestions</text>
 </svg>

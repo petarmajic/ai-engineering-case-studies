@@ -35,5 +35,3 @@ I built the FastAPI routes for preparing, inspecting and activating knowledge ve
 **Embed and publish.** I migrated the earlier FAISS baseline to **PostgreSQL with pgvector**. Each FAQ entry belongs to a knowledge version and stores its question, answer, source and embedding. The build embeds the entry’s search text. The knowledge base API controls when the draft becomes searchable by the chat agent.
 
 **Retrieve and answer.** The FAQ tool embeds the shopper’s question, finds nearby entries in the active version and gives their text to the model. For supported postcode tables, I added a row lookup after retrieval. A surcharge table can be relevant to a delivery question, but a postcode missing from that table tells us nothing about whether delivery is available.
-
-[See one FAQ entry move from page to chat](../README.md#how-a-web-page-becomes-a-chat-answer)
