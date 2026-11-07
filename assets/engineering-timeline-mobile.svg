@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 450" role="img" aria-labelledby="t d"><title id="t">Selected engineering work in 2026</title><desc id="d">A timeline from support tools and retrieval to supplier file intake.</desc><rect width="340" height="450" rx="8" fill="#f7f9fc"/><g font-family="DejaVu Sans, Arial, sans-serif"><text x="16" y="27" fill="#21374c" font-size="16" font-weight="bold">Selected engineering work · 2026</text><path d="M19 54V360" stroke="#adc3d7" stroke-width="2"/>
+<circle cx="19" cy="58" r="4" fill="#245e8a"/>
+<text x="34" y="62" fill="#245e8a" font-size="12" font-weight="bold">JAN–MAR</text>
+<text x="34" y="85" fill="#21374c" font-size="17" font-weight="bold">Orders and conversation state</text>
+<text x="34" y="108" fill="#405970" font-size="14">Keep deliveries and attachments tied</text><text x="34" y="125" fill="#405970" font-size="14">to the right conversation.</text>
+<circle cx="19" cy="160" r="4" fill="#245e8a"/>
+<text x="34" y="164" fill="#245e8a" font-size="12" font-weight="bold">JUL</text>
+<text x="34" y="187" fill="#21374c" font-size="17" font-weight="bold">Searchable delivery tables</text>
+<text x="34" y="210" fill="#405970" font-size="14">Check a postcode against rows</text><text x="34" y="227" fill="#405970" font-size="14">in the retrieved table.</text>
+<circle cx="19" cy="262" r="4" fill="#245e8a"/>
+<text x="34" y="266" fill="#245e8a" font-size="12" font-weight="bold">SEP–OCT</text>
+<text x="34" y="289" fill="#21374c" font-size="17" font-weight="bold">Knowledge releases</text>
+<text x="34" y="312" fill="#405970" font-size="14">Review a draft before making it</text><text x="34" y="329" fill="#405970" font-size="14">available to chat.</text>
+<circle cx="19" cy="364" r="4" fill="#107363"/>
+<text x="34" y="368" fill="#107363" font-size="12" font-weight="bold">NOV</text>
+<text x="34" y="391" fill="#21374c" font-size="17" font-weight="bold">Supplier file intake</text>
+<text x="34" y="414" fill="#405970" font-size="14">Reject incomplete files before</text><text x="34" y="431" fill="#405970" font-size="14">replacing accepted data.</text>
+</g></svg>
