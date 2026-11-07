@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="353" viewBox="0 0 820 353" role="img" aria-labelledby="t d">
+<defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6c8797"/></marker></defs>
+<title id="t">Reading a conversation trace</title><desc id="d">Schematic trace, without timings. Within a chat request the agent chooses an order tool, reads back the result and composes the reply. The output check then examines that reply.</desc>
+<rect x="0" y="0" width="820" height="353" rx="12" fill="#f8fafb" stroke="none"/>
+<text x="28" y="40" font-family="DejaVu Sans, Arial, sans-serif" font-size="26" font-weight="bold" fill="#172f42">Reading a conversation trace</text>
+<text x="28" y="69" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="bold" fill="#086753">Illustrative span tree · no customer data</text>
+<text x="28" y="108" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="bold" fill="#235e88">Span</text>
+<text x="380" y="108" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="bold" fill="#235e88">What to inspect</text>
+<polyline points="28,120 788,120" fill="none" stroke="#c2d0d6" stroke-width="2" />
+<polyline points="33,151 33,304 62,304" fill="none" stroke="#c2d0d6" stroke-width="2" />
+<polyline points="64,190 64,267 90,267" fill="none" stroke="#c2d0d6" stroke-width="2" />
+<rect x="30" y="145" width="8" height="8" rx="2" fill="#235e88" stroke="none"/>
+<text x="46" y="154" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Chat request</text>
+<text x="380" y="154" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="normal" fill="#405b6a">Resume the customer’s thread.</text>
+<rect x="58" y="183" width="8" height="8" rx="2" fill="#235e88" stroke="none"/>
+<text x="74" y="192" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Agent execution</text>
+<text x="380" y="192" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="normal" fill="#405b6a">Select the order lookup tool.</text>
+<rect x="86" y="221" width="8" height="8" rx="2" fill="#086753" stroke="none"/>
+<text x="102" y="230" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Order lookup</text>
+<text x="380" y="230" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="normal" fill="#405b6a">Return one status per delivery.</text>
+<rect x="86" y="259" width="8" height="8" rx="2" fill="#086753" stroke="none"/>
+<text x="102" y="268" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Model reply</text>
+<text x="380" y="268" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="normal" fill="#405b6a">Explain both delivery statuses.</text>
+<rect x="58" y="297" width="8" height="8" rx="2" fill="#235e88" stroke="none"/>
+<text x="74" y="306" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Output check</text>
+<text x="380" y="306" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="normal" fill="#405b6a">Review the generated reply.</text>
+</svg>

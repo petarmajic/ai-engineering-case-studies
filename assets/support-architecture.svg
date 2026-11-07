@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="449" viewBox="0 0 820 449" role="img" aria-labelledby="t d">
+<defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6c8797"/></marker></defs>
+<title id="t">Support architecture</title><desc id="d">The FastAPI entry point calls the agent runtime. The runtime uses Redis, order and ticket services and the FAQ tool. Administrators activate the knowledge version that the FAQ tool searches.</desc>
+<rect x="0" y="0" width="820" height="449" rx="12" fill="#f8fafb" stroke="none"/>
+<text x="28" y="40" font-family="DejaVu Sans, Arial, sans-serif" font-size="26" font-weight="bold" fill="#172f42">Support assistant architecture</text>
+<rect x="25" y="71" width="219" height="82" rx="7" fill="#eaf2f8" stroke="none"/>
+<text x="38" y="97" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Web widget → FastAPI</text>
+<text x="38" y="120" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">Receive message</text>
+<text x="38" y="140" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">and check input.</text>
+<polyline points="246,111 278,111" fill="none" stroke="#6c8797" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="280" y="71" width="242" height="82" rx="7" fill="#e7f4ed" stroke="none"/>
+<text x="293" y="97" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">LangGraph + LangChain</text>
+<text x="293" y="120" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">Resume the thread</text>
+<text x="293" y="140" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">and choose a tool.</text>
+<polyline points="401,153 401,183" fill="none" stroke="#6c8797" stroke-width="2" />
+<polyline points="401,183 140,183 140,209" fill="none" stroke="#6c8797" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="25" y="212" width="235" height="84" rx="7" fill="#eaf2f8" stroke="none"/>
+<text x="38" y="238" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Redis</text>
+<text x="38" y="261" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">Conversation state</text>
+<text x="38" y="281" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">and attachments</text>
+<polyline points="401,183 395,183 395,209" fill="none" stroke="#6c8797" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="280" y="212" width="235" height="84" rx="7" fill="#eaf2f8" stroke="none"/>
+<text x="293" y="238" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Order and CRM tools</text>
+<text x="293" y="261" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">Check an order or</text>
+<text x="293" y="281" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">create a ticket.</text>
+<polyline points="401,183 668,183 668,209" fill="none" stroke="#6c8797" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="553" y="212" width="235" height="84" rx="7" fill="#eaf2f8" stroke="none"/>
+<text x="566" y="238" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">FAQ tool</text>
+<text x="566" y="261" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">Search the active</text>
+<text x="566" y="281" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">knowledge version.</text>
+<rect x="553" y="345" width="235" height="65" rx="7" fill="#eaf2f8" stroke="none"/>
+<text x="566" y="371" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">PostgreSQL + pgvector</text>
+<text x="566" y="394" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">Active version and vectors</text>
+<polyline points="668,296 668,342" fill="none" stroke="#6c8797" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="280" y="345" width="242" height="65" rx="7" fill="#e7f4ed" stroke="none"/>
+<text x="293" y="371" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Admin API</text>
+<text x="293" y="394" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">Validate and activate a draft.</text>
+<polyline points="523,379 549,379" fill="none" stroke="#6c8797" stroke-width="2" marker-end="url(#arrow)" />
+<text x="25" y="364" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#086753">Chat traces</text>
+<text x="25" y="389" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="normal" fill="#405b6a">OpenTelemetry → Phoenix</text>
+</svg>

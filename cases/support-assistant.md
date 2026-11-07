@@ -1,46 +1,47 @@
 # Conversational AI Support Platform
 
-A shopper can ask about delivery, check an order or attach a photo to a support request. I worked on this team’s existing assistant from January through October 2026. I started with order and payment data, then worked on conversation state, tool-call limits and the knowledge release process.
+A shopper can ask about delivery, check an order or attach a photo to a support request. I worked on the team’s existing production assistant from January through October 2026. My work grew from fixing individual tool responses to following a request across services and managing which knowledge version the assistant searched.
 
 [Overview](../README.md)
 
-## Keeping track of an order across messages
+## Where a chat request goes
 
-One order can have several deliveries. I worked on translating order and warehouse statuses into a response that keeps those deliveries separate. The model explains the result to the customer. The application checks eligibility for a return or change against the order data.
+<picture>
+  <source media="(max-width: 600px)" srcset="../assets/support-architecture-mobile.svg">
+  <img src="../assets/support-architecture.svg" alt="FastAPI hands a chat request to the agent runtime, which uses Redis, order and CRM tools, and FAQ retrieval. A separate admin API manages knowledge versions.">
+</picture>
 
-A support request can also span several messages. A shopper might send a photo before a ticket exists. I added Redis storage for attachments and tied each reference to its conversation. When the ticket is created, the application keeps its identifier so a tool can attach the photo to the right ticket later. The assistant works with a reference to the photo.
+**Figure 1.** The chat service reads the active knowledge version. The admin service can prepare and validate its replacement while conversations continue.
 
-## Following a tool call
+The web widget sends the message and conversation ID to **FastAPI**. After the input check, **LangGraph** resumes the thread and the model can call a **LangChain** tool. An order tool retrieves business data, Python checks the relevant rules and the model explains the result. The final reply goes through an output check before it returns to the widget.
 
-FastAPI receives the message and LangGraph resumes the conversation. I added limits on model calls and a separate counter for ticket creation because repeated attempts to write to the ticketing system have different consequences from repeated lookups. I also worked on fallback models and summarisation for longer conversations. I worked on batch trace export with OpenTelemetry and Phoenix so I could follow the model and tool steps within a request and see where a retry or failure occurred.
+An order can have more than one shipment. I worked on mapping order, payment and warehouse statuses so each delivery retained its own status. I also added **Redis** storage for attachments. A shopper can send a photo before a support ticket exists. Once the ticket is created, a tool can use the stored ticket ID and attachment reference to send the right photo to the CRM.
 
-## Finding a document and checking a value
+## How I evaluated a reply in Phoenix
 
-Consider the illustrative question “Is delivery available to postcode 12345?” The FAQ tool embeds the question and searches the active knowledge version in PostgreSQL with pgvector. For a supported table, it extracts the postcode and checks the corresponding rows.
+I reviewed **OpenTelemetry** traces in **Arize Phoenix** to evaluate the assistant’s behaviour across a request. I worked on exporting traces in batches. For an order question, the useful comparison was between the customer’s request, the tool call, its result and the final reply.
 
-| Retrieved table | What the tool can conclude |
-| --- | --- |
-| Delivery areas | A matching row supports an answer about availability for that postcode. |
-| Areas with an extra charge | A missing row gives no evidence that delivery is available. |
+<picture>
+  <source media="(max-width: 600px)" srcset="../assets/trace-review-mobile.svg">
+  <img src="../assets/trace-review.svg" alt="Illustrative span tree for an order lookup, with model and tool steps and a final output check.">
+</picture>
 
-I added table types and structured rows so that the application could make that distinction. When it cannot identify the postcode or interpret the table reliably, it returns the broader table context.
+**Figure 2.** A trace helps locate a bad answer. If the order tool returns two deliveries but the reply mentions only one, the discrepancy appears after the lookup. This is a schematic example.
 
-## Releasing knowledge while chat is running
+A retry matters more when a call creates a ticket than when it reads an order. I added separate limits for model calls and ticket creation. I also worked on fallback models and summarisation so longer conversations could carry forward the order context.
 
-The earlier retrieval path used a local FAISS index. I worked on migrating the baseline into PostgreSQL and switching the FAQ tool to the active version. For longer source documents, the model selects source blocks and the application assembles the answer from those blocks. This keeps the original wording available for review.
+## When the right document still gives the wrong answer
 
-```mermaid
-flowchart TD
-    build["Build from sources"] --> checks{"Content checks pass?"}
-    checks -->|No| keep["Keep serving current version"]
-    checks -->|Yes| draft["Save draft for review"]
-    draft --> activate["Administrator activates version"]
-    activate --> chat["Chat searches new version"]
-    chat --> restore["Administrator can restore previous version"]
-```
+Suppose a shopper asks whether delivery is available to postcode 12345. The FAQ tool embeds the question and uses **pgvector** to search the active knowledge version. A delivery-area table and a surcharge table can both look relevant to vector search. An absent postcode on a surcharge list tells us nothing about delivery availability.
 
-**Figure 1.** A successful build creates a draft. An administrator decides when conversations start using it.
+I added table types and structured rows so Python could interpret the match. For supported tables, the tool locates the postcode column and checks its rows. If the postcode or table type is unclear, it returns the broader table context. The retrieval step finds a source. The row check determines what the assistant can say from it.
 
-I contributed the build and activation API, validation checks and the interface for reviewing and activating versions. For example, the build checks table headers and row counts before a draft can be created. Activation changes the active version in a database transaction. I later fixed reactivation of an older version so the team could return chat to previously reviewed content.
+## Changing what the assistant knows
 
-A teammate separated the admin and chat applications and added session login. My part was connecting the storage, build checks and operator controls that govern what the assistant can retrieve.
+I worked on migrating the **FAISS** baseline into PostgreSQL and moving the runtime search to the active version. I then connected three parts of a release:
+
+1. **Build.** For long source documents, the model selects source blocks. The application assembles the answer from their original text.
+2. **Review.** Checks compare table headers and row counts with the source. A successful build produces a draft that an administrator can inspect.
+3. **Activate.** The admin API changes the active version in a database transaction. I fixed reactivation of archived versions so an administrator could restore previously reviewed content.
+
+A teammate separated the admin and chat applications and added session login. My contribution covered the versioned data, retrieval, build checks and controls that let the team choose which release customers would see.

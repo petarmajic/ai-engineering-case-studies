@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="626" viewBox="0 0 380 626" role="img" aria-labelledby="t d">
+<defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6c8797"/></marker></defs>
+<title id="t">Catalog intake architecture</title><desc id="d">A development command calls the parser and writes only valid files through the Django initial-state service. A separate intended product path includes review, background jobs and AI suggestions.</desc>
+<rect x="0" y="0" width="380" height="626" rx="12" fill="#f8fafb" stroke="none"/>
+<text x="18" y="40" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="bold" fill="#172f42">Catalog intake architecture</text>
+<text x="18" y="75" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="bold" fill="#086753">Implemented · initial load</text>
+<rect x="18" y="90" width="344" height="66" rx="7" fill="#eaf2f8" stroke="none"/>
+<text x="31" y="116" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Local XLSX or CSV</text>
+<text x="31" y="139" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">Development command opens the file.</text>
+<polyline points="41,156 41,178" fill="none" stroke="#6c8797" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="18" y="182" width="344" height="66" rx="7" fill="#e7f4ed" stroke="none"/>
+<text x="31" y="208" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Python parser</text>
+<text x="31" y="231" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">Read typed rows and surface errors.</text>
+<polyline points="41,248 41,270" fill="none" stroke="#6c8797" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="18" y="274" width="344" height="66" rx="7" fill="#eaf2f8" stroke="none"/>
+<text x="31" y="300" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Django → PostgreSQL</text>
+<text x="31" y="323" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">Save only when all required rows pass.</text>
+<polyline points="18,362 362,362" fill="none" stroke="#c2d0d6" stroke-width="2" />
+<text x="18" y="396" font-family="DejaVu Sans, Arial, sans-serif" font-size="17" font-weight="bold" fill="#235e88">Planned product workflow</text>
+<text x="28" y="431" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="normal" fill="#405b6a">React review screens</text>
+<text x="28" y="474" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="normal" fill="#405b6a">Django API and Celery workers</text>
+<text x="28" y="517" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="normal" fill="#405b6a">FastAPI service for AI suggestions</text>
+<text x="28" y="560" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="normal" fill="#405b6a">External catalog import</text>
+</svg>

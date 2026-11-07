@@ -1,40 +1,34 @@
 # Catalog Intake Workbench
 
-Suppliers send price lists with different headings, price formats and product codes. In November 2026 I implemented the Python parser that reads known XLSX and CSV formats into typed articles. I connected it to an existing Django service so the team could load an initial supplier catalog from a local file.
+A supplier’s spreadsheet becomes the starting point for a catalog import. If a product disappears from a full import, it may be marked inactive downstream. In November 2026 I built the Python parser for known XLSX and CSV layouts and connected it to the team’s existing Django service for loading an initial catalog.
 
 [Overview](../README.md)
 
-## A file can look complete and still lose data
+## Where my parser fits
 
-Some workbooks declare a used range that ends before the last product row. A reader that relies on that range can silently drop products. I fixed the reader and added a regression case for an undersized range. I also handled headers below introductory text and added diagnostics for unreadable numeric cells.
+<picture>
+  <source media="(max-width: 600px)" srcset="../assets/catalog-architecture-mobile.svg">
+  <img src="../assets/catalog-architecture.svg" alt="The implemented file loader validates records before passing them to Django. The wider design includes React, background workers, a separate AI service and external import.">
+</picture>
 
-The parser preserves text identifiers and decimal prices. In this synthetic example, a supplier uses a comma as the decimal separator.
+**Figure 1.** The upper path runs through a development command. The lower section shows the intended product workflow, including operator review and AI suggestions.
 
-| Spreadsheet field | Input | Expected interpretation |
-| --- | --- | --- |
-| Product code stored as text | `000123` | Keep all six characters so it still refers to the same product. |
-| Price | `12,345` | Read the decimal value `12.345` using the supplier format. |
-| Price in a second product row | Invalid numeric value | Report the row and prevent a partial replacement. |
+A teammate built the data model and initial-state service. My parser finds the header, maps columns by name and returns typed articles with row diagnostics. The development command calls the service only when it has a complete set of valid articles. That boundary lets the parser report a bad file without writing to PostgreSQL.
 
-## Where the parser meets the team’s backend
+## Two failures worth testing
 
-The parser returns articles and diagnostics. A teammate implemented the data model and initial-state service. I wrote the development command that joins the two. Its validation step requires a complete set of articles before it calls the service.
+**A workbook hides its last row.** Some XLSX files declare a used range smaller than the data in the worksheet. I fixed the reader and added a regression test for a file whose declared dimensions would produce a shortened list. The test checks that the shortened list cannot replace the existing state. [Illustrative worksheet](../README.md#when-a-spreadsheet-silently-drops-a-product).
 
-```mermaid
-flowchart TD
-    file["Supplier XLSX or CSV"] --> parse["Find headers and read rows"]
-    parse --> check{"All required rows valid?"}
-    check -->|Yes| service["Call existing Django service"]
-    service --> state["Store initial supplier state"]
-    check -->|No| reject["Report errors and keep prior state"]
-```
+**A valid row sits next to a broken one.** A parser that skips an unreadable price can return perfectly valid articles for the remaining products. I added a test that starts with an accepted catalog and introduces one blocking row. The expected outcome is that the previous catalog stays intact.
 
-**Figure 1.** Both paths start with the same supplier file. A blocking error stops the command before it can write a shortened product list.
+| Field in a synthetic supplier file | What the parser should do |
+| --- | --- |
+| Text product code `000123` | Keep the leading zeros so the code still identifies the same product. |
+| Price `12,345` in a decimal-comma format | Preserve the decimal value `12.345`. |
+| Unreadable numeric cell | Identify the problem row and stop the replacement. |
 
-I added tests for a blocked row in an otherwise valid file and for a workbook whose declared dimensions hide data. Both address the same downstream risk. A full import can treat omitted products as inactive. I also added Linux subprocess limits for parsing time, memory and output size so one unusually large file could not occupy the parser indefinitely.
+I used **openpyxl** for workbooks and Python’s CSV reader for delimited files. I also added Linux subprocess limits for time, memory and output size. Targeted parser and normalization tests passed in the development review. The Linux subprocess tests were skipped on Windows.
 
-## How this fits into the wider product
+## What the wider team designed
 
-The team designed a larger workflow in which Django manages an import and a separate FastAPI service proposes categories, attributes and descriptions for review. The part I implemented runs through a development command on a feature branch. The end-to-end upload, AI suggestion and external import flow was still planned in the version described here.
-
-Targeted parser and normalization tests passed in the development review. The Linux subprocess tests were skipped on Windows, and the database integration suite was not rerun in that review.
+The product design gives **Django** ownership of catalog state and **Celery** workers responsibility for background jobs. A separate **FastAPI** service is intended to suggest categories and attributes for operator review in **React**. The parser and loader were implemented on a feature branch. The user-facing upload, AI suggestion and external import steps had yet to be connected into a complete workflow in that version.

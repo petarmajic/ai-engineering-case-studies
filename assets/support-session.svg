@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="386" viewBox="0 0 820 386" role="img" aria-labelledby="t d">
+<defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#6c8797"/></marker></defs>
+<title id="t">Inside a support session</title><desc id="d">Production usage and an illustrative order lookup. The runtime selects a tool and the reply preserves both deliveries.</desc>
+<rect x="0" y="0" width="820" height="386" rx="12" fill="#f8fafb" stroke="none"/>
+<text x="28" y="40" font-family="DejaVu Sans, Arial, sans-serif" font-size="26" font-weight="bold" fill="#172f42">Inside a support session</text>
+<text x="28" y="96" font-family="DejaVu Sans, Arial, sans-serif" font-size="40" font-weight="bold" fill="#086753">≈30,000</text>
+<text x="28" y="118" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="normal" fill="#405b6a">production sessions</text>
+<text x="404" y="96" font-family="DejaVu Sans, Arial, sans-serif" font-size="40" font-weight="bold" fill="#086753">5–8</text>
+<text x="404" y="118" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="normal" fill="#405b6a">messages on average</text>
+<text x="404" y="137" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="normal" fill="#405b6a">per successful session</text>
+<polyline points="18,155 802,155" fill="none" stroke="#c2d0d6" stroke-width="2" />
+<text x="28" y="182" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="bold" fill="#235e88">Illustrative order lookup</text>
+<text x="28" y="212" font-family="DejaVu Sans, Arial, sans-serif" font-size="22" font-weight="normal" fill="#172f42">“Where is the rest of my order?”</text>
+<rect x="28" y="235" width="210" height="85" rx="7" fill="#eaf2f8" stroke="none"/>
+<text x="41" y="261" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Order tool</text>
+<text x="41" y="284" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">LangGraph requests</text>
+<text x="41" y="304" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">the order record.</text>
+<polyline points="241,276 275,276" fill="none" stroke="#6c8797" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="278" y="235" width="248" height="85" rx="7" fill="#e7f4ed" stroke="none"/>
+<text x="291" y="261" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Delivery mapping</text>
+<text x="291" y="284" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">Delivery A: delivered</text>
+<text x="291" y="304" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">Delivery B: in transit</text>
+<polyline points="529,276 563,276" fill="none" stroke="#6c8797" stroke-width="2" marker-end="url(#arrow)" />
+<rect x="566" y="235" width="225" height="85" rx="7" fill="#eaf2f8" stroke="none"/>
+<text x="579" y="261" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#172f42">Reply to the shopper</text>
+<text x="579" y="284" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">“One parcel arrived. The</text>
+<text x="579" y="304" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#405b6a">other is still on its way.”</text>
+<text x="28" y="359" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="bold" fill="#086753">Trace review</text>
+<text x="149" y="359" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="normal" fill="#405b6a">OpenTelemetry → Phoenix</text>
+</svg>
