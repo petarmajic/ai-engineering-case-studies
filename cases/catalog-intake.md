@@ -1,6 +1,6 @@
 # Catalog Intake Workbench
 
-Suppliers use different formats for their price lists. Our team designed a workbench to turn those files into product updates an operator could review. I built the Python intake for known XLSX and CSV formats and connected it to the team’s Django backend.
+Suppliers send price lists in different formats. Our team designed a workbench where an operator could review product updates before sending them to an external catalog. I built the Python intake for XLSX and CSV files and connected it to the team’s Django backend.
 
 [Overview](../README.md)
 
@@ -11,12 +11,10 @@ Suppliers use different formats for their price lists. Our team designed a workb
   <img src="../assets/catalog-system.svg" alt="File intake sends validated products to Django and PostgreSQL. The planned workflow adds React review and a separate FastAPI service for AI suggestions.">
 </picture>
 
-**Figure 1.** The file intake and initial catalog load were implemented. The dashed connections show the planned review and AI workflow.
+**Figure 1.** The initial load takes validated products from a supplier file into Django. The dashed connections show the proposed review and AI workflow.
 
-**Django** owns the supplier and product records in **PostgreSQL**. The team’s design gives operators a **React** interface to review changes. A separate **FastAPI** service would suggest categories and attributes, with **Celery** coordinating background work.
+The **Django** backend stores accepted product records in **PostgreSQL**. In the team’s design, operators would review changes in **React**. **Celery** would coordinate background jobs and a separate **FastAPI** service would suggest product categories and attributes.
 
 ## My contribution
 
-A teammate built the service that stores the accepted catalog. I translated supplier columns into the typed product records that service expects. I added validation and tests so a file with missing or invalid data cannot replace a catalog the team has already accepted.
-
-That handoff taught me how to design a Python component around another engineer’s API. The two parts had to agree on what a valid product looks like and when it is safe to write to the database.
+A teammate built the service that stores the accepted catalog. I mapped supplier columns to the typed product records that service expects. I added tests to check that an incomplete file leaves the previously accepted catalog intact.

@@ -1,6 +1,6 @@
 # Conversational AI Support Platform
 
-A shopper can track an order, ask about delivery or start a support request. I worked on the existing production assistant from January through October 2026. I started with the tools the assistant called and later took responsibility for the knowledge base API.
+A shopper can track an order, follow up about a delivery or start a support request. From January through October 2026, I worked on the tools behind those conversations and built the API our team used to publish new knowledge.
 
 [Overview](../README.md)
 
@@ -11,21 +11,25 @@ A shopper can track an order, ask about delivery or start a support request. I w
   <img src="../assets/support-runtime.svg" alt="The chat widget sends a message to FastAPI. The LangGraph runtime uses order and CRM tools, Redis state and FAQ retrieval.">
 </picture>
 
-**Figure 1.** FastAPI receives the message. LangGraph resumes the conversation and the model chooses a tool according to what the shopper asks.
+**Figure 1.** The web widget sends the message to FastAPI. LangGraph resumes the conversation and the model can ask a tool for the data it needs.
 
-**Tool integration.** An order can arrive in several shipments. I mapped the status of each delivery so the assistant could explain which parcels were still on their way. I also used Redis to keep order context and attachments available across messages.
+**Order context.** I mapped shipment statuses separately so an answer about one parcel would not be mistaken for the status of the whole order. I used Redis to keep order context and attachment references available across messages.
 
-**Evaluation.** I reviewed OpenTelemetry traces in Arize Phoenix to see how the assistant reached an answer. For example, if a tool returns two shipments and the reply mentions only one, the trace shows where the detail was lost.
+**Trace review.** I used OpenTelemetry to export request traces to Arize Phoenix. Each trace let me follow the model and tool calls behind a single reply. For example, if the order tool returns two shipments but the final reply mentions only one, I can inspect how the model used the tool result.
 
 ## Building the knowledge base API
 
-I built the FastAPI routes and review interface that let an operator prepare a new knowledge version, inspect its contents and choose when to publish it. A teammate separated the admin and chat services and added login. My responsibility was the release process behind that interface.
+I built the FastAPI routes for preparing, inspecting and activating knowledge versions. I also built the review interface that calls those routes. A teammate separated the admin and chat services and added login.
 
 <picture>
   <source media="(max-width: 600px)" srcset="../assets/knowledge-release-mobile.svg">
   <img src="../assets/knowledge-release.svg" alt="The admin API writes and activates versions. Chat reads only the active version through the FAQ tool.">
 </picture>
 
-**Figure 2.** Operators can review a draft or restore a previous release. Conversations search the active version.
+**Figure 2.** An operator can review a draft while the assistant searches the active version. Restoring an earlier release changes which entries the next query can retrieve.
 
-I migrated the earlier FAISS baseline into **PostgreSQL with pgvector**. Separating a draft from the active version meant the team could update the knowledge base while customers were still using the assistant. The FAQ tool searches the version the operator has approved, including when an earlier release is restored.
+## From source text to a reply
+
+For longer documents, the build splits source text into chunks. The model selects the relevant chunks and the application uses their original text to form an FAQ entry. An embedding model then converts the entry’s search text into a vector. I migrated the earlier FAISS index into **PostgreSQL with pgvector** so each entry and its embedding belong to a specific knowledge version.
+
+When a shopper asks about delivery, the FAQ tool embeds the question and searches for the closest entries in the active version. Vector search can find the right table, but the type of table determines what the assistant can conclude. I added a row lookup for supported postcode tables because a postcode missing from a surcharge list tells us nothing about whether delivery is available.
