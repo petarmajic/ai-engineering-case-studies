@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d" width="365" height="410" viewBox="0 0 365 410">
+<title id="t">Supplier catalog architecture</title><desc id="d">File intake loads valid products through Django into PostgreSQL. The planned review path uses React and a separate FastAPI service for suggestions.</desc>
+<rect width="365" height="410" fill="#fff"/>
+<defs><marker id="tip" viewBox="0 0 8 8" refX="6.8" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0L7 4L0 8Z" fill="#70859a"/></marker></defs>
+<g transform="translate(30 35) scale(1)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-19 -19H19V19H-19Z" fill="#edf4ff"/>
+<path d="M-19 -8H19 M-7 -8V19 M-19 2H19 M-19 11H19" fill="none"/></g>
+<text x="66" y="34" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">Supplier files</text>
+<text x="66" y="54" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="13" fill="#52667b">Validated XLSX or CSV records</text>
+<path d="M30 60V81" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)"/>
+<g transform="translate(30 110) scale(1)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-21 -17H21V-4H-21Z M-21 3H21V16H-21Z" fill="#edf4ff"/>
+<path d="M-15 -10H-12 M-6 -10H12 M-15 10H-12 M-6 10H12" fill="none"/></g>
+<text x="66" y="109" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">Django backend</text>
+<text x="66" y="129" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="13" fill="#52667b">Owns supplier and catalog state.</text>
+<path d="M30 134V337" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
+<path d="M30 189H59" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)"/>
+<g transform="translate(83 189) scale(1)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-19 -12V12C-19 22 19 22 19 12V-12C19 -22 -19 -22 -19 -12Z" fill="#edf4ff"/>
+<path d="M-19 -12C-19 -3 19 -3 19 -12 M-19 1C-19 10 19 10 19 1" fill="none"/></g>
+<text x="119" y="188" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">PostgreSQL</text>
+<text x="119" y="208" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="13" fill="#52667b">Accepted supplier data</text>
+<path d="M30 263H59" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)" stroke-dasharray="5 5"/>
+<g transform="translate(83 263) scale(1)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-22 -16H22V16H-22Z" fill="#edf4ff"/>
+<path d="M-22 -8H22 M-15 1H-4 M-15 8H6" fill="none"/></g>
+<text x="119" y="262" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">React review</text>
+<text x="119" y="282" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="13" fill="#52667b">Proposed operator workflow</text>
+<path d="M30 337H59" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)" stroke-dasharray="5 5"/>
+<g transform="translate(83 337) scale(1)" stroke="#245db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-14 -14H14V14H-14Z" fill="#edf4ff"/>
+<path d="M-6 -20V-14 M6 -20V-14 M-6 14V20 M6 14V20 M-20 -6H-14 M-20 6H-14 M14 -6H20 M14 6H20" fill="none"/></g>
+<text x="119" y="336" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="16" fill="#203349">FastAPI AI service</text>
+<text x="119" y="356" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="13" fill="#52667b">Planned category suggestions</text>
+<path d="M30 134V189H59" fill="none" stroke="#70859a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#tip)"/>
+<text x="20" y="393" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="13" fill="#52667b">Dashed connections are planned.</text>
+</svg>
