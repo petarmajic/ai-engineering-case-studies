@@ -1,46 +1,98 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="895" height="535" viewBox="0 0 895 535" role="img" aria-labelledby="t d"><title id="t">Engineering responsibilities by project</title><desc id="d">Two projects with the contributions and tools for each branch. The dashed catalog branch is the team’s planned review and AI workflow.</desc>
-<rect width="895" height="535" fill="white"/>
-<g transform="translate(112 129) scale(1.7)" stroke="#285eaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#edf4ff"><path d="M-19 -14H12Q15 -14 15 -10V6Q15 9 12 9H-5L-13 16V9H-17Q-20 9 -20 6V-10Q-20 -14 -17 -14Z"/></g><g fill="none"><path d="M-13 -5H7M-13 1H2M20 -4V14Q20 17 17 17H13V21L7 17"/></g></g>
-<text x="112" y="82" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="15" fill="#285eaa">JAN–OCT 2026</text>
-<text x="112" y="187" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="19" fill="#203349">Support assistant</text>
-<path d="M154 129H243" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
-<path d="M243 129Q253 129 253 119V47Q253 37 264 37H310" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
-<circle cx="310" cy="37" r="3" fill="#879caf"/>
-<path d="M243 129H310" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
-<circle cx="310" cy="129" r="3" fill="#879caf"/>
-<path d="M243 129Q253 129 253 139V219Q253 229 264 229H310" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
-<circle cx="310" cy="229" r="3" fill="#879caf"/>
-<g transform="translate(339 37) scale(1.06)" stroke="#285eaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#edf4ff"><rect x="-15" y="-9" width="30" height="23" rx="4"/></g><g fill="none"><path d="M0 -9V-16M-3 -16H3M-6 -1V3M6 -1V3M-5 8H5"/></g></g>
-<text x="376" y="39" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Run the conversation</text>
-<text x="387" y="65" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#475f75">Chat widget   ·   HTML, CSS, JavaScript</text>
-<text x="387" y="87" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#475f75">Agent tools and state   ·   LangChain, LangGraph, Redis</text>
-<g transform="translate(339 129) scale(1.06)" stroke="#285eaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#edf4ff"><path d="M-15 -10C-15 -18 15 -18 15 -10V10C15 18 -15 18 -15 10Z"/></g><g fill="none"><path d="M-15 -10C-15 -2 15 -2 15 -10M-15 0C-15 8 15 8 15 0"/></g></g>
-<text x="376" y="131" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Prepare and publish knowledge</text>
-<text x="387" y="157" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#475f75">Read source pages   ·   Jina Reader</text>
-<text x="387" y="179" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#475f75">Vector search   ·   FAISS to PostgreSQL with pgvector</text>
-<text x="387" y="201" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#475f75">Knowledge base API   ·   Python, FastAPI</text>
-<g transform="translate(339 229) scale(1.06)" stroke="#285eaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#edf4ff"></g><g fill="none"><path d="M-13 -13V12H-5M-13 -5H-6M-3 -5H12M-2 12H13M0 -5V3H7"/></g></g>
-<text x="376" y="231" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Evaluate the reply</text>
-<text x="387" y="257" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#475f75">Request traces   ·   OpenTelemetry and Arize Phoenix</text>
-<path d="M18 294H876" fill="none" stroke="#d8e2ea" stroke-linecap="round" stroke-width="1.6" />
-<g transform="translate(112 387) scale(1.7)" stroke="#126d61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#e9f5f1"><rect x="-17" y="-17" width="34" height="34" rx="2"/></g><g fill="none"><path d="M-17 -7H17M-5 -7V17M-17 2H17M-17 10H17"/></g></g>
-<text x="112" y="340" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="15" fill="#126d61">NOV 2026</text>
-<text x="112" y="445" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="19" fill="#203349">Supplier catalog</text>
-<path d="M154 387H243" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
-<path d="M243 387Q253 387 253 377V346Q253 336 264 336H310" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
-<circle cx="310" cy="336" r="3" fill="#879caf"/>
-<path d="M243 387Q253 387 253 397V400Q253 410 264 410H310" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
-<circle cx="310" cy="410" r="3" fill="#879caf"/>
-<path d="M243 387Q253 387 253 397V472Q253 482 264 482H310" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" stroke-dasharray="4 5" />
-<circle cx="310" cy="482" r="3" fill="#879caf"/>
-<g transform="translate(339 336) scale(1.06)" stroke="#126d61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#e9f5f1"><path d="M-12 -16H4L12 -8V16H-12Z"/></g><g fill="none"><path d="M4 -15V-8H11M-7 -2H6M-7 5H6"/></g></g>
-<text x="376" y="338" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Read and validate supplier files</text>
-<text x="387" y="364" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#475f75">Spreadsheet intake   ·   Python, openpyxl, Pydantic</text>
-<g transform="translate(339 410) scale(1.06)" stroke="#126d61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#e9f5f1"><path d="M-16 -13H16V-3H-16ZM-16 3H16V13H-16Z"/></g><g fill="none"><path d="M-11 -8H-9M-4 -8H10M-11 8H-9M-4 8H10"/></g></g>
-<text x="376" y="412" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Connect to the catalog backend</text>
-<text x="387" y="438" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#475f75">Initial load   ·   Django, PostgreSQL</text>
-<text x="387" y="460" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#475f75">Regression tests   ·   pytest</text>
-<g transform="translate(339 482) scale(1.06)" stroke="#475f75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#f1f4f7"><path d="M-16 -12H16V10H-16Z"/></g><g fill="none"><path d="M-16 5H16M0 10V15M-7 15H7"/></g></g>
-<text x="376" y="484" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Planned team workflow</text>
-<text x="387" y="510" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="15" fill="#475f75">React and TypeScript UI  ·  Celery jobs  ·  FastAPI suggestions</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="784" height="733" viewBox="0 0 784 733" role="img" aria-labelledby="t d"><title id="t">Engineering responsibilities by project</title><desc id="d">Two projects with the contributions and tools for each branch. The dashed catalog branch is the team’s planned review and AI workflow.</desc>
+<rect width="784" height="733" fill="white"/>
+<g transform="translate(298 28) scale(1.0)" stroke="#285eaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#edf3fb"><rect x="-15" y="-9" width="30" height="23" rx="4"/></g><g fill="none"><path d="M0 -9V-16M-3 -16H3M-6 -1V3M6 -1V3M-5 8H5"/></g></g>
+<text x="331" y="32" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Run the conversation</text>
+<text x="344" y="60" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Chat widget</text>
+<rect x="490" y="44" width="55" height="22" rx="4" fill="#edf3fb"/>
+<text x="498" y="60" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#285eaa">HTML</text>
+<rect x="550" y="44" width="44" height="22" rx="4" fill="#edf3fb"/>
+<text x="558" y="60" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#285eaa">CSS</text>
+<rect x="599" y="44" width="86" height="22" rx="4" fill="#edf3fb"/>
+<text x="607" y="60" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#285eaa">JavaScript</text>
+<text x="344" y="87" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Agent tools</text>
+<rect x="490" y="71" width="90" height="22" rx="4" fill="#edf3fb"/>
+<text x="498" y="87" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#285eaa">LangChain</text>
+<rect x="585" y="71" width="93" height="22" rx="4" fill="#edf3fb"/>
+<text x="593" y="87" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#285eaa">LangGraph</text>
+<text x="344" y="114" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Chat state</text>
+<rect x="490" y="98" width="54" height="22" rx="4" fill="#edf3fb"/>
+<text x="498" y="114" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#285eaa">Redis</text>
+<g transform="translate(298 154) scale(1.0)" stroke="#285eaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#edf3fb"><path d="M-15 -10C-15 -18 15 -18 15 -10V10C15 18 -15 18 -15 10Z"/></g><g fill="none"><path d="M-15 -10C-15 -2 15 -2 15 -10M-15 0C-15 8 15 8 15 0"/></g></g>
+<text x="331" y="158" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Prepare and publish knowledge</text>
+<text x="344" y="186" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Source pages</text>
+<rect x="490" y="170" width="95" height="22" rx="4" fill="#edf3fb"/>
+<text x="498" y="186" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#285eaa">Jina Reader</text>
+<text x="344" y="213" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Vector search</text>
+<rect x="490" y="197" width="54" height="22" rx="4" fill="#edf3fb"/>
+<text x="498" y="213" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#285eaa">FAISS</text>
+<text x="551" y="213" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">→</text>
+<rect x="572" y="197" width="179" height="22" rx="4" fill="#edf3fb"/>
+<text x="580" y="213" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#285eaa">PostgreSQL + pgvector</text>
+<text x="344" y="240" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Release API</text>
+<rect x="490" y="224" width="65" height="22" rx="4" fill="#edf3fb"/>
+<text x="498" y="240" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#285eaa">Python</text>
+<rect x="560" y="224" width="66" height="22" rx="4" fill="#edf3fb"/>
+<text x="568" y="240" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#285eaa">FastAPI</text>
+<g transform="translate(298 280) scale(1.0)" stroke="#285eaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#edf3fb"></g><g fill="none"><path d="M-13 -13V12H-5M-13 -5H-6M-3 -5H12M-2 12H13M0 -5V3H7"/></g></g>
+<text x="331" y="284" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Evaluate the reply</text>
+<text x="344" y="312" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Export traces</text>
+<rect x="490" y="296" width="122" height="22" rx="4" fill="#edf3fb"/>
+<text x="498" y="312" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#285eaa">OpenTelemetry</text>
+<text x="344" y="339" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Review traces</text>
+<rect x="490" y="323" width="111" height="22" rx="4" fill="#edf3fb"/>
+<text x="498" y="339" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#285eaa">Arize Phoenix</text>
+<g transform="translate(102 154) scale(1.55)" stroke="#285eaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#edf3fb"><path d="M-19 -14H12Q15 -14 15 -10V6Q15 9 12 9H-5L-13 16V9H-17Q-20 9 -20 6V-10Q-20 -14 -17 -14Z"/></g><g fill="none"><path d="M-13 -5H7M-13 1H2M20 -4V14Q20 17 17 17H13V21L7 17"/></g></g>
+<text x="102" y="109" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="15" fill="#285eaa">JAN–OCT 2026</text>
+<text x="102" y="210" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Support assistant</text>
+<path d="M143 154H209" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<path d="M209 154Q219 154 219 144V38Q219 28 229 28H267" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<circle cx="267" cy="28" r="3" fill="#879caf"/>
+<path d="M209 154H267" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<circle cx="267" cy="154" r="3" fill="#879caf"/>
+<path d="M209 154Q219 154 219 164V270Q219 280 229 280H267" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<circle cx="267" cy="280" r="3" fill="#879caf"/>
+<path d="M12 375H772" fill="none" stroke="#d4dfe8" stroke-linecap="round" stroke-width="1.6" />
+<g transform="translate(298 409) scale(1.0)" stroke="#126d61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#e9f5f1"><path d="M-12 -16H4L12 -8V16H-12Z"/></g><g fill="none"><path d="M4 -15V-8H11M-7 -2H6M-7 5H6"/></g></g>
+<text x="331" y="413" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Read and validate supplier files</text>
+<text x="344" y="441" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">File intake</text>
+<rect x="490" y="425" width="65" height="22" rx="4" fill="#e9f5f1"/>
+<text x="498" y="441" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#126d61">Python</text>
+<rect x="560" y="425" width="80" height="22" rx="4" fill="#e9f5f1"/>
+<text x="568" y="441" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#126d61">openpyxl</text>
+<text x="344" y="468" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Validation</text>
+<rect x="490" y="452" width="76" height="22" rx="4" fill="#e9f5f1"/>
+<text x="498" y="468" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#126d61">Pydantic</text>
+<g transform="translate(298 508) scale(1.0)" stroke="#126d61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#e9f5f1"><path d="M-16 -13H16V-3H-16ZM-16 3H16V13H-16Z"/></g><g fill="none"><path d="M-11 -8H-9M-4 -8H10M-11 8H-9M-4 8H10"/></g></g>
+<text x="331" y="512" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Connect to the catalog backend</text>
+<text x="344" y="540" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Initial load</text>
+<rect x="490" y="524" width="66" height="22" rx="4" fill="#e9f5f1"/>
+<text x="498" y="540" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#126d61">Django</text>
+<rect x="561" y="524" width="96" height="22" rx="4" fill="#e9f5f1"/>
+<text x="569" y="540" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#126d61">PostgreSQL</text>
+<text x="344" y="567" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Tests</text>
+<rect x="490" y="551" width="60" height="22" rx="4" fill="#e9f5f1"/>
+<text x="498" y="567" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#126d61">pytest</text>
+<g transform="translate(298 607) scale(1.0)" stroke="#475f75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#f4f6f8"><path d="M-16 -12H16V10H-16Z"/></g><g fill="none"><path d="M-16 5H16M0 10V15M-7 15H7"/></g></g>
+<text x="331" y="611" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Planned team workflow</text>
+<text x="344" y="639" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Review UI</text>
+<rect x="490" y="623" width="55" height="22" rx="4" fill="#f1f3f5"/>
+<text x="498" y="639" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">React</text>
+<rect x="550" y="623" width="89" height="22" rx="4" fill="#f1f3f5"/>
+<text x="558" y="639" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">TypeScript</text>
+<text x="344" y="666" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Background jobs</text>
+<rect x="490" y="650" width="61" height="22" rx="4" fill="#f1f3f5"/>
+<text x="498" y="666" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">Celery</text>
+<text x="344" y="693" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">AI suggestions</text>
+<rect x="490" y="677" width="66" height="22" rx="4" fill="#f1f3f5"/>
+<text x="498" y="693" text-anchor="start" font-family="DejaVu Sans, Arial, sans-serif" font-weight="400" font-size="14" fill="#475f75">FastAPI</text>
+<g transform="translate(102 508) scale(1.55)" stroke="#126d61" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="#e9f5f1"><rect x="-17" y="-17" width="34" height="34" rx="2"/></g><g fill="none"><path d="M-17 -7H17M-5 -7V17M-17 2H17M-17 10H17"/></g></g>
+<text x="102" y="463" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="15" fill="#126d61">NOV 2026</text>
+<text x="102" y="564" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="18" fill="#203349">Supplier catalog</text>
+<path d="M143 508H209" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<path d="M209 508Q219 508 219 498V419Q219 409 229 409H267" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<circle cx="267" cy="409" r="3" fill="#879caf"/>
+<path d="M209 508H267" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" />
+<circle cx="267" cy="508" r="3" fill="#879caf"/>
+<path d="M209 508Q219 508 219 518V597Q219 607 229 607H267" fill="none" stroke="#879caf" stroke-linecap="round" stroke-width="1.6" stroke-dasharray="4 5" />
+<circle cx="267" cy="607" r="3" fill="#879caf"/>
 </svg>
