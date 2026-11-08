@@ -1,6 +1,8 @@
 # AI engineering for retail
 
-A shopper can ask our production support assistant about an order or a delivery. As a **student AI/ML engineer**, I built order tools and the **knowledge base API** our team uses to publish support content. On a second project, I connected supplier price lists to a teammate’s catalog backend.
+As a **student AI/ML engineer**, I worked on a customer support chatbot that handled **nearly 30,000 sessions in production**. I built order tracking tools and the knowledge base API our team uses to publish support content. I monitored conversations in Arize Phoenix and evaluated replies by comparing what the chatbot told shoppers with the shipment data our tools returned.
+
+I now work on a supplier catalog that takes Excel price lists as input. A single file can have around **20,000 rows and 50 columns**. I write the Python code that maps each supplier’s columns to the product records our Django backend expects.
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/engineering-path-mobile.svg">
@@ -13,7 +15,7 @@ I rejoined the team in January after my Erasmus semester at Polytech Tours. My f
 
 ## Customer support in production
 
-The assistant handled **about 30,000 production sessions**. Successful sessions averaged roughly **5–8 messages**. I evaluated replies in **Arize Phoenix** by following OpenTelemetry traces from the tool result to the final answer. If an order had two shipments, for example, I could check whether the reply accounted for both.
+Successful support sessions averaged roughly **5–8 messages**. I evaluated replies in **Arize Phoenix** by following OpenTelemetry traces from the tool result to the final answer. If an order had two shipments, for example, I could check whether the reply accounted for both.
 
 I scraped support pages, split long documents into chunks and used the source text to build question-and-answer entries. I stored those entries and their embeddings in **PostgreSQL**. The FastAPI routes I built let an operator activate a reviewed version, and the FAQ tool uses **pgvector** to search that version during chat.
 
